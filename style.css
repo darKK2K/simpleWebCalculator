@@ -1,0 +1,173 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.856), rgba(0, 0, 0, 0.938));
+    height: 100vh;
+}
+
+.headingtext {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.result {
+    margin-top: 3rem;
+    width: 31.5rem;
+    height: 10vh;
+    border: 2px solid black;
+    font-size: 2.2rem;
+    font-family: sans-serif;
+    padding-left: 0.5rem;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 1);
+}
+
+h1 {
+    color: white;
+    font-family: sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    border: 5px solid white;
+    border-radius: 10px;
+    width: 18.8rem;
+}
+
+h1:hover {
+    cursor: pointer;
+    transform: scale(1.2);  
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0rem 0rem 0rem 0rem;
+}
+
+.input-button {
+    width: 0rem;
+    height: 0vh;
+    background: linear-gradient(to bottom,rgba(0, 0, 0, 0.6),rgba(0, 0, 1, 0.884));
+    color: white;
+    border: 0px solid black; /*0px so black won't work anyways*/
+    outline:none;
+}
+
+.input-button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 5px rgba(20, 224, 139, 0.938);
+    border: 1px solid rgba(20, 224, 139, 0.938);
+}
+
+.blue {
+    background: linear-gradient(to bottom,rgb(2, 3, 80),rgba(12, 5, 102, 0.884));
+}
+
+.blue:hover {
+    box-shadow: 0px 0px 5px rgba(255, 0, 120, 1);
+    border-color: rgba(255, 0, 120, 1);
+}
+
+.common input {
+    display: block;
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 2rem;
+}
+
+@media only screen and (min-width: 624px) {
+
+    .input-button {
+        width: 8rem;
+        height: 8vh;
+    }
+}
+
+@media only screen and (max-width: 623px) {
+
+    .input-button {
+        width: 8rem;
+        height: 8vh;
+    }
+    
+    .result {
+        width: 31.5rem;
+        font-size: 1.95rem;
+    }
+}
+
+@media only screen and (max-width: 559px) {
+
+    .input-button {
+        width: 7rem;
+        height: 7.8vh;
+    }
+    
+    .result {
+        width: 27.3rem;
+        font-size: 1.75rem;
+    }
+
+    .common input {
+        font-size: 1.95rem;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .input-button {
+        width: 6rem;
+        height: 7.8vh;
+    }
+
+    .result {
+        width: 23.4rem;
+        font-size: 1.65rem;
+    }
+
+    .common input {
+        font-size: 1.85rem;
+    }
+}
+
+@media only screen and (max-width: 435px) {
+
+    .input-button {
+        width: 5rem;
+        height: 8vh;
+    }
+
+    .result {
+        width: 19.4rem;
+        font-size: 1.45rem;
+    }
+
+    .common input {
+        font-size: 1.75rem;
+    }
+
+}
+
+@media only screen and (max-width: 371px) {
+
+    .input-button {
+        width: 4.7rem;
+        height: 8vh;
+    }
+
+    .result {
+        width: 18.1rem;
+        font-size: 1.30rem;
+    }
+
+    .common input {
+        font-size: 1.65rem;
+    }
+
+}
+

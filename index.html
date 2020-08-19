@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+</head>
+<body>
+    <div class="headingtext">
+        <h1 class="animate__animated animate__zoomIn">Basic Calculator</h1>
+        <form name="calc">
+            <input name="display" readonly class="animate__animated animate__zoomIn result"></input>
+    </div>
+            <div class="form animate__animated animate__zoomIn">
+                <div class="common one">
+                    <input class="input-button" type="button" value="C" onclick="calc.display.value='', equation=''">
+                    <input class="input-button" type="button" value="1" onclick="display.value+='1', equation = checkBracketForNum(equation,'1')">
+                    <input class="input-button" type="button" value="4" onclick="display.value+='4', equation = checkBracketForNum(equation,'4')">
+                    <input class="input-button" type="button" value="7" onclick="display.value+='7', equation = checkBracketForNum(equation,'7')">
+                    <input class="input-button" type="button" value="&#960" onclick="display.value+='&#960', equation = checkforLeftBracket(equation), equation = checkBracketForNum(equation,'22/7)')">
+                    <input class="input-button" type="button" value="sin" onclick="display.value+= 'sin(', equation = mathFuncCheck(equation,'Math.sin(')">
+                    <input class="input-button" type="button" value="log" onclick="display.value+= 'log(', equation = mathFuncCheck(equation,'Math.log10(')">
+                </div>
+                <div class="common two">
+                    <input class="input-button" type="button" value="(" onclick="display.value+='(', equation = checkforLeftBracket(equation)">
+                    <input class="input-button" type="button" value="2" onclick="display.value+='2', equation = checkBracketForNum(equation,'2')">
+                    <input class="input-button" type="button" value="5" onclick="display.value+='5', equation = checkBracketForNum(equation,'5')">
+                    <input class="input-button" type="button" value="8" onclick="display.value+='8', equation = checkBracketForNum(equation,'8')">
+                    <input class="input-button" type="button" value="0" onclick="display.value+='0', equation = checkBracketForNum(equation,'0')">
+                    <input class="input-button" type="button" value="cos" onclick="display.value+= 'cos(', equation = mathFuncCheck(equation,'Math.cos(')">
+                    <input class="input-button" type="button" value="^" onclick="eqBackup = equation, equation+=placeOnce(equation,'**'), display.value = signException(equation,eqBackup,display.value,'^')">
+                </div>
+                <div class="common three"> 
+                <input class="input-button" type="button" value=")" onclick="eqBackup = equation, equation = checkforRightBracket(equation), display.value = rightBracketDisplayVerify(equation,eqBackup,display.value)">
+                    <input class="input-button" type="button" value="3" onclick="display.value+='3', equation = checkBracketForNum(equation,'3')">
+                    <input class="input-button" type="button" value="6" onclick="display.value+='6', equation = checkBracketForNum(equation,'6')">
+                    <input class="input-button" type="button" value="9" onclick="display.value+='9', equation = checkBracketForNum(equation,'9')">
+                    <input class="input-button" type="button" value="." onclick="display.value+='.', equation+='.'">
+                    <input class="input-button" type="button" value="tan" onclick="display.value+= 'tan(', equation = mathFuncCheck(equation,'Math.tan(')">
+                    <input class="input-button" type="button" value="&#8730" onclick="display.value+= '&#8730', equation = mathFuncCheck(equation,'Math.sqrt(')">
+                </div>
+                <div class="common four">
+                    <input class="input-button" type="button" value="&#8592" onclick="equation = removeLastFromEQ(equation), display.value = removeLastFromDisplay(display.value)">
+                    <input class="input-button" type="button" value="+" onclick="eqBackup = equation, equation+=placeOnce(equation,'+'), display.value = signException(equation,eqBackup,display.value,'+')">
+                    <input class="input-button" type="button" value="-" onclick="eqBackup = equation, equation+=placeOnce(equation,'-'), display.value = signException(equation,eqBackup,display.value,'-')">
+                    <input class="input-button" type="button" value="*" onclick="eqBackup = equation, equation+=placeOnce(equation,'*'), display.value = signException(equation,eqBackup,display.value,'*')">
+                    <input class="input-button" type="button" value="&#247" onclick="eqBackup = equation, equation+=placeOnce(equation,'/'), display.value = signException(equation,eqBackup,display.value,'/')">
+                    <input class="input-button" type="button" value="e" onclick="display.value+= 'e^(', equation = mathFuncCheck(equation,'Math.exp(')">
+                    <input class="input-button blue" type="button" value="=" onclick="displayBackup = display.value, display.value = solve(equation,display.value), eqBackup = equation, equation = eqSolveCheck(display.value,displayBackup,eqBackup)">
+                </div>
+            </div>
+        </form>
+        <script type="text/javascript" src="script.js"></script>
+</body>
+<!-- &#8730-->
+</html>
